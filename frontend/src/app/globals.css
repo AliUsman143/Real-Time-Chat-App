@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb; /* light gray background for whole app */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+.gradient {
+  background: linear-gradient(150deg, rgb(29, 142, 255) 50%, rgb(0, 106, 255) 100%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.message img{
+  max-width: 30vw;
+}
+
+.message .logo{
+  min-width: 3rem;
+}
+
+*::-webkit-scrollbar {
+  width: .6rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(163, 209, 255);
+  border-radius: 1rem;
+  /* outline: 1px solid slategrey; */
+}
+
+.loader {
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.loader div {
+  width: .5rem;
+  height: .5rem;
+  background-color: black;
+  border-radius: 50%;
+  animation: grow-shrink 1.5s infinite;
+}
+
+.loader div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loader div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loader div:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes grow-shrink {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media screen and (max-width: 767px) {
+  .message img{
+    max-width: 60vw;
+  }
 }
