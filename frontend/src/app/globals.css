@@ -1,22 +1,20 @@
-@import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
 
 body {
   font-family: 'Inter', sans-serif;
   background: #f9fafb; /* light gray background for whole app */
 }
 
-
 .gradient {
   background: linear-gradient(150deg, rgb(29, 142, 255) 50%, rgb(0, 106, 255) 100%);
 }
 
-.message img{
+.message img {
   max-width: 30vw;
 }
 
-.message .logo{
+.message .logo {
   min-width: 3rem;
 }
 
@@ -27,7 +25,6 @@ body {
 *::-webkit-scrollbar-thumb {
   background-color: rgb(163, 209, 255);
   border-radius: 1rem;
-  /* outline: 1px solid slategrey; */
 }
 
 .loader {
@@ -66,7 +63,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .message img{
+  .message img {
     max-width: 60vw;
   }
 }
